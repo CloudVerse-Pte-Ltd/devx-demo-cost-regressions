@@ -19,7 +19,7 @@ variable "enable_nat_gateway" {
 }
 
 resource "aws_nat_gateway" "this" {
-  count = var.enable_nat_gateway ? 1 : 0
+  count = var.enable_nat_gateway ? 5 : 0
 
   allocation_id = "eipalloc-1234567890abcdef0"
   subnet_id     = "subnet-1234567890abcdef0"
