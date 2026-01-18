@@ -55,4 +55,5 @@ Severity level
 Clear fix recommendations
 
 📸 Screenshot:
-<img width="1126" height="1294" alt="Screenshot 2026-01-18 at 22 33 47" src="https://github.com/user-attachments/assets/acb3cbc1-7b0b-4310-90d7-95c295b96781" />
+<img width="936" height="1558" alt="Screenshot 2026-01-18 at 22 35 26" src="https://github.com/user-attachments/assets/f2475779-3712-4a24-b76b-fed41292851d" />
+
