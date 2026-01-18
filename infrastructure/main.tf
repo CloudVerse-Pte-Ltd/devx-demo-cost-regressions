@@ -12,8 +12,15 @@ provider "aws" {
   region = "us-east-1"
 }
 
-# Demo: NAT Gateway cost regression
+# Demo toggle: NAT Gateway disabled on main (count = 0)
+variable "enable_nat_gateway" {
+  type    = bool
+  default = false
+}
+
 resource "aws_nat_gateway" "this" {
+  count = var.enable_nat_gateway ? 1 : 0
+
   allocation_id = "eipalloc-1234567890abcdef0"
   subnet_id     = "subnet-1234567890abcdef0"
 
