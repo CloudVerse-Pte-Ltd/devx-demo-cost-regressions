@@ -1,6 +1,6 @@
 /**
  * Demo file: intentionally expensive patterns.
- * Expected findings:
+ * Expected findings: 
  * - Chatty API calls in loop
  * - Client recreated in hot path
  * - Retry explosion (no backoff/jitter)
