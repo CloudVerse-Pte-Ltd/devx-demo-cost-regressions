@@ -1,7 +1,7 @@
 ###############################################################################
 # BIG + BAD Terraform demo (intentionally expensive)
 # Purpose: generate noisy, high-cost IaC diffs for PR cost regression demos.
-# WARNING: Do NOT apply this in a real account.
+# WARNING: Do NOT apply this in a real account - V1
 ###############################################################################
 
 terraform {
