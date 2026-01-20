@@ -15,7 +15,7 @@ provider "aws" {
 # Demo toggle: NAT Gateway disabled on main (count = 0)
 variable "enable_nat_gateway" {
   type    = bool
-  default = false
+  default = true
 }
 
 resource "aws_nat_gateway" "this" {
