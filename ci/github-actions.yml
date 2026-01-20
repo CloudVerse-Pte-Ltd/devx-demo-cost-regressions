@@ -4,4 +4,4 @@ jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "demo"
+      - run: echo "demo-5"
