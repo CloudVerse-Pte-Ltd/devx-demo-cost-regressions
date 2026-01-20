@@ -1,6 +1,6 @@
 """ 
 Demo file: intentionally expensive patterns.
-Expected findings:
+Expected findings:::::
 - Unbounded loop / runaway remote calls
 - Chatty API/SDK calls inside loop (N+1)
 - Retry explosion (no backoff/jitter)
