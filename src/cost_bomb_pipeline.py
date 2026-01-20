@@ -15,7 +15,7 @@ import requests
 
 def fetch_all_orders():
     # BAD: pulls everything, no pagination, no limit
-    r = requests.get("https://api.example.com/orders")
+    r = requests.get("https://api1.example.com/orders")
     r.raise_for_status()
     return r.json()
 
@@ -23,7 +23,7 @@ def fetch_order_detail(order_id: str):
     # BAD: retry loop with no backoff/jitter
     for attempt in range(1, 9):
         try:
-            r = requests.get(f"https://api.example.com/orders/{order_id}")
+            r = requests.get(f"https://api2.example.com/orders/{order_id}")
             r.raise_for_status()
             return r.json()
         except Exception as e:
