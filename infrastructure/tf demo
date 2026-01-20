@@ -13,7 +13,7 @@ terraform {
     }
     random = {
       source  = "hashicorp/random"
-      version = ">= 3.5"
+      version = ">= 3.7"
     }
   }
 }
@@ -33,7 +33,7 @@ variable "region" {
 
 variable "name" {
   type    = string
-  default = "devx-cost-regression-demo"
+  default = "devx-cost-regression-demo-take-5"
 }
 
 variable "vpc_cidr" {
