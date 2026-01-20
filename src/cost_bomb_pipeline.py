@@ -1,4 +1,4 @@
-""" 
+"""  
 Demo file: intentionally expensive patterns.
 Expected findings:
 - Unbounded loop / runaway remote calls
