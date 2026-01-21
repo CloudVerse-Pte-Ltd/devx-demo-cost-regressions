@@ -5,7 +5,7 @@ Expected findings:dfd
 - Chatty API/SDK calls inside loop (N+1)
 - Retry explosion (no backoff/jitter)
 - Missing pagination/limits
-- Excessive logging volume
+- Excessive logging volumegdfgdfgdfgf
 - App-side filtering (pull all, filter locally)
 """
 
