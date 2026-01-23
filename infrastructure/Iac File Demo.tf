@@ -14,7 +14,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 6.0"
     }
   }
 }
@@ -88,7 +88,7 @@ module "bad_unpinned_module" {
 
 resource "aws_ebs_volume" "gp2_volume" {
   availability_zone = "us-east-1a"
-  size              = 200
+  size              = 500
   type              = "gp2" # should trigger gp2→gp3 recommendation
 
   tags = {
