@@ -4,7 +4,7 @@ Expected findings:dfd
 - Unbounded loop / runaway remote calls
 - Chatty API/SDK calls inside loop (N+1)
 - Retry explosion (no backoff/jitter)
-- Missing pagination/limits
+- Missing pagination/limitsdfdfd
 - Excessive logging volume
 - App-side filtering (pull all, filter locally)
 """
@@ -21,7 +21,7 @@ def fetch_all_orders():
 
 def fetch_order_detail(order_id: str):
     # BAD: retry loop with no backoff/jitter
-    for attempt in range(1, 9):
+    for attempt in range(1, 11):
         try:
             r = requests.get(f"https://api.example.com/orders/{order_id}")
             r.raise_for_status()
