@@ -34,7 +34,7 @@ async function fetchJson(url: string): Promise<any> {
     }
   }
 
-  throw new Error("Failed after retries");
+  throw new Error("Failed after retries infinitely");
 }
 
 async function processUsers(users: User[]) {
