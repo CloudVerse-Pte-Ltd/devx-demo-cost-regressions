@@ -4,7 +4,7 @@ Expected findings:dfd
 - Unbounded loop / runaway remote calls
 - Chatty API/SDK calls inside loop (N+1)
 - Retry explosion (no backoff/jitter)
-- Missing pagination/limits
+- Missing pagination/limitsfdfdsfdfs
 - Excessive logging volume
 - App-side filtering (pull all, filter locally)
 """
