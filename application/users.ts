@@ -1,5 +1,6 @@
 export async function fetchProfile(userId: string) {
   // placeholder remote call
+  //
   return { id: userId };
 }
 
