@@ -6,7 +6,7 @@
 # Targets (3 rules):
 # 1) TF_UNBOUNDED_COUNT_VARIABLE        (blocking)  - count driven by an unbounded var
 # 2) TF_MODULE_VERSION_NOT_PINNED       (warn)      - module uses unpinned ref
-# 3) AWS_EBS_GP2_INSTEAD_OF_GP3         (warn)      - EBS volume type gp2
+# 3) AWS_EBS_GP2_INSTEAD_OF_GP3         (warn)      - EBS volume type gp2 - lets go
 ###############################################################################
 
 terraform {
