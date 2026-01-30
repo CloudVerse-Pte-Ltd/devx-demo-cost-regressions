@@ -16,7 +16,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 5.1"
     }
   }
 }
@@ -30,13 +30,13 @@ variable "region" { type = string default = "us-east-1" }
 # HIGH: Unbounded scale input (no validation)
 variable "web_count" {
   type    = number
-  default = 6
+  default = 9
 }
 
 # HIGH: Open-ended autoscaling max (no upper bound)
 variable "asg_max" {
   type    = number
-  default = 500
+  default = 800
 }
 
 # Missing org cost tags (intentionally)
@@ -138,7 +138,7 @@ resource "aws_autoscaling_group" "web_asg" {
   # Missing tags propagation
   tag {
     key                 = "Name"
-    value               = "devx-demo-asg"
+    value               = "devx-unknown-asg"
     propagate_at_launch = true
   }
 }
