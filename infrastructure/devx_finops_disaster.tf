@@ -30,13 +30,13 @@ variable "region" { type = string default = "us-east-1" }
 # HIGH: Unbounded scale input (no validation)
 variable "web_count" {
   type    = number
-  default = 6
+  default = 9
 }
 
 # HIGH: Open-ended autoscaling max (no upper bound)
 variable "asg_max" {
   type    = number
-  default = 500
+  default = 800
 }
 
 # Missing org cost tags (intentionally)
