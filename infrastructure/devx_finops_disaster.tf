@@ -30,7 +30,7 @@ variable "region" { type = string default = "us-east-1" }
 # HIGH: Unbounded scale input (no validation)
 variable "web_count" {
   type    = number
-  default = 6
+  default = 10
 }
 
 # HIGH: Open-ended autoscaling max (no upper bound)
