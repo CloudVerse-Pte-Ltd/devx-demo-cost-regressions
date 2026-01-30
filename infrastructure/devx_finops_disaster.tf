@@ -16,7 +16,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 5.2"
     }
   }
 }
@@ -30,13 +30,13 @@ variable "region" { type = string default = "us-east-1" }
 # HIGH: Unbounded scale input (no validation)
 variable "web_count" {
   type    = number
-  default = 6
+  default = 9
 }
 
 # HIGH: Open-ended autoscaling max (no upper bound)
 variable "asg_max" {
   type    = number
-  default = 500
+  default = 700
 }
 
 # Missing org cost tags (intentionally)
