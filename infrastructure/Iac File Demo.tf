@@ -14,7 +14,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 5.8"
     }
   }
 }
@@ -37,7 +37,7 @@ variable "region" {
 # Keep default small so this doesn't accidentally create a lot if someone applies.
 variable "instance_count" {
   type    = number
-  default = 2
+  default = 5
   # Note: no validation block on purpose (that's the point)
 }
 
@@ -67,7 +67,7 @@ resource "aws_instance" "bad_count" {
 
   tags = {
     Name        = "devx-demo-${count.index}"
-    Environment = "demo"
+    Environment = "prod"
     Owner       = "devx"
   }
 }
