@@ -1,5 +1,5 @@
 # Global owners
-* @cloudverse/platform-team
+* @cloudverse/engineering
 
 # Service-specific
-/src/DEVX/ @cloudverse/devx-team
+/src/DEVX/ @cloudverse/devx
