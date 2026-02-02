@@ -1,2 +1,6 @@
-# Global owners
-* @engineering/devx
+# Global owners (fallback)
+* @CloudVerse-Pte-Ltd/platform
+
+# Service-specific ownership
+/src/DEVX/ @CloudVerse-Pte-Ltd/devx
+
