@@ -30,7 +30,7 @@ async function fetchJson(url: string): Promise<any> {
       // BAD: noisy logs in retry loop
       console.log("[retry]", { url, attempt, err: String(e) });
       // BAD: fixed sleep (thundering herd)
-      await sleep(50);
+      await sleep(20);
     }
   }
 
