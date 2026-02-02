@@ -15,11 +15,11 @@ provider "aws" {
 # Demo toggle: NAT Gateway disabled on main (count = 0)
 variable "enable_nat_gateway" {
   type    = bool
-  default = false
+  default = true
 }
 
 resource "aws_nat_gateway" "this" {
-  count = var.enable_nat_gateway ? 5 : 0
+  count = var.enable_nat_gateway ? 10 : 0
 
   allocation_id = "eipalloc-1234567890abcdef0"
   subnet_id     = "subnet-1234567890abcdef0"
