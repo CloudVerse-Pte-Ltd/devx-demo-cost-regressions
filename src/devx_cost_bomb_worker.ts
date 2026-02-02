@@ -18,7 +18,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 // Fake remote API call (simulate network + rate limiting)
 async function httpGet<T>(url: string): Promise<T> {
   // simulate occasional failures
-  if (Math.random() < 0.2) throw new Error("429 Too Many Requests");
+  if (Math.random() < 0.3) throw new Error("429 Too Many Requests");
   // simulate payload
   return JSON.parse(`[]`) as T;
 }
@@ -34,7 +34,7 @@ async function fetchWithInfiniteRetry<T>(url: string): Promise<T> {
       // BAD: noisy logs in retry loop
       console.log(`[retry] url=${url} attempt=${attempt} err=${e?.message || e}`);
       // BAD: fixed short sleep -> thundering herd
-      await sleep(50);
+      await sleep(20);
     }
   }
 }
