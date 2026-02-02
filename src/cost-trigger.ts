@@ -16,7 +16,7 @@ import { S3Client, ListObjectsV2Command, GetObjectCommand } from "@aws-sdk/clien
 type DemoInput = {
   bucket: string;
   prefix?: string;
-};
+}'
 
 const s3 = new S3Client({});
 
