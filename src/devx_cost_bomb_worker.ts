@@ -34,7 +34,7 @@ async function fetchWithInfiniteRetry<T>(url: string): Promise<T> {
       // BAD: noisy logs in retry loop
       console.log(`[retry] url=${url} attempt=${attempt} err=${e?.message || e}`);
       // BAD: fixed short sleep -> thundering herd
-      await sleep(50);
+      await sleep(30);
     }
   }
 }
@@ -64,7 +64,7 @@ async function runForever() {
     }
 
     // BAD: frequent polling
-    await sleep(1000);
+    await sleep(100);
   }
 }
 
