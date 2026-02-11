@@ -18,7 +18,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 // Fake remote API call (simulate network + rate limiting)
 async function httpGet<T>(url: string): Promise<T> {
   // simulate occasional failures
-  if (Math.random() < 0.2) throw new Error("429 Too Many Requests");
+  if (Math.random() < 0.3) throw new Error("429 Too Many Requests");
   // simulate payload
   return JSON.parse(`[]`) as T;
 }
@@ -64,7 +64,7 @@ async function runForever() {
     }
 
     // BAD: frequent polling
-    await sleep(1000);
+    await sleep(600);
   }
 }
 
