@@ -64,7 +64,7 @@ async function runForever() {
     }
 
     // BAD: frequent polling
-    await sleep(1000);
+    await sleep(100);
   }
 }
 
